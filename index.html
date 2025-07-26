@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle" />
+        <span class="slider"></span>
+      </label>
+      <span>Dark</span>
+    </div>
+
+    <h1>Music Player</h1>
+    <div class="search-wrapper">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search songs or playlists..."
+      />
+    </div>
+    <div id="searchResults"></div>
+    <div class="container">
+      <!-- Left: Song List -->
+      <div class="left-panel">
+        <label for="genreFilter">Filter by Genre:</label>
+        <select id="genreFilter">
+          <option value="All">All</option>
+          <option value="Pop">Pop</option>
+          <option value="Rock">Rock</option>
+        </select>
+
+        <h2>All Songs</h2>
+        <div id="songList"></div>
+      </div>
+
+      <!-- Center: Player -->
+      <div class="player-panel">
+        <div id="nowPlaying">
+          <img id="songImage" src="" alt="Album Art" />
+          <h3 id="songTitle">Select a song</h3>
+          <p id="songArtist"></p>
+        </div>
+        <audio id="audioPlayer" controls></audio>
+        <div id="shuffleControls">
+          <button id="prevSongBtn">←</button>
+          <button id="nextSongBtn">→</button>
+        </div>
+        <button id="addToPlaylistBtn">Add to Current Playlist</button>
+      </div>
+
+      <!-- Right: Playlists -->
+      <div class="right-panel">
+        <input
+          type="text"
+          id="playlistInput"
+          placeholder="Enter playlist name"
+        />
+        <button id="createPlaylistBtn">Create Playlist</button>
+
+        <div class="current-playlist">
+          <h3>Current Playlist</h3>
+          <div id="currentPlaylist"></div>
+        </div>
+
+        <h3>All Playlist</h3>
+        <div id="allPlaylists" class="playlist-container"></div>
+      </div>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  color: #000;
+}
+ h1{
+    text-align: center;
+ }
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.left-panel, .right-panel, .player-panel {
+  background: #87CEFA;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.player-panel {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#currentPlaylist{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+#addToPlaylistBtn{
+    margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #3f7ea5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#addToPlaylistBtn:hover{
+    background-color: #86baf1;
+}
+#shuffleControls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+#shuffleControls button {
+  padding: 8px 16px;
+  font-size: 20px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#songImage {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#songList button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.switch input { display: none; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  left: 2px;
+  bottom: 2px;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Dark mode */
+body.dark {
+  background: #222;
+  color: white;
+}
+body.dark .left-panel,
+body.dark .right-panel,
+body.dark .player-panel {
+  background: #333;
+}
+.playlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.playlist-button {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #222;
+  color: #fff;
+  border: 2px solid #444;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  width: fit-content;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.playlist-button:hover {
+  background-color: #555;
+  border-color: #999;
+}
+
+.playlist-button.active {
+  background-color: #ff4081;
+  border-color: #fff;
+}
+.playlist-song-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.remove-btn {
+  padding: 4px 8px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #ff1a1a;
+}
+.playlist-song-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.remove-button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#searchInput {
+  padding: 8px 16px;
+  width: 60%;
+  max-width: 400px;
+  font-size: 16px;
+  border: 2px solid #444;
+  border-radius: 8px;
+}
+
+#searchResults button {
+  display: inline-block;
+  width: 100%;
+  margin: 5px 0;
+  background-color: #333;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.playlist-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.remove-playlist-button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
